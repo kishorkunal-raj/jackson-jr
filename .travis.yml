@@ -14,7 +14,9 @@ branches:
     - master
 
 before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
-script: "[ ${TRAVIS_PULL_REQUEST} = 'false' ] && mvn clean deploy --settings target/travis/settings.xml || mvn clean verify --settings target/travis/settings.xml"
+script: 
+  - if [[ jdk == "openjdk11" ]]; then jdk_switcher use openjdk11; export JAVA_HOME=$HOME/openjdk11; $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk11 --target $JAVA_HOME; fi
+  - "[ ${TRAVIS_PULL_REQUEST} = 'false' ] && mvn clean deploy --settings target/travis/settings.xml || mvn clean verify --settings target/travis/settings.xml"
 
 env:
   global:
