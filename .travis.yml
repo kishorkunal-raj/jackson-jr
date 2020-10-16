@@ -21,3 +21,6 @@ env:
     - secure: "b4w65PD3TmiywSKwz+uLRT6yOUa0zS012uIbpu51ZW74DZ5pXZWdzY/Ax4bQQkjxqKlAYNAWif7dkwon6xxDpTcfdv2orr7f0fDE7jPWl2gfnRMzqJUeRT1JKu7GkKac2J6nf8K8tK+xx1tcFklpLuk+M69mH9P44AN5Y+3bINU="
     - secure: "ea1e7inahwTosc+ulPxW7jgN0UdsHqovByYGFxGNIzniNLpuax44OM4XkRex3r91ldSm/QU5n4yXDlvBFjH368ux8+fxvCbfC039BUEKc/GtbMqETX4dTOcd1KHEyEYuXN1oo2ZgmN97Yg7/igZc6HdUYOJLiUklq05l+lz4T1k="
 
+arch:
+  - amd64
+  - ppc64le
